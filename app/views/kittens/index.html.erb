@@ -1,0 +1,16 @@
+<h1>Kittens</h1>
+
+<%= render "flash_message" %>
+
+<ul>
+  <% @kittens.each do |k| %>
+    <li>
+      <p>Name: <%= k.name %></p>
+      <p>Age: <%= k.age %></p>
+      <p>Cuteness: <%= k.cuteness %></p>
+      <p>Softness: <%= k.softness %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New kitten", new_kitten_path %>
